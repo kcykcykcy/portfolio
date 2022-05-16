@@ -437,7 +437,6 @@ a.banner_type3 .banner_box{
 	text-align: center;
 }
 a.banner_type3 .banner_box h3 {
-	transition: color 0.5s;
 	line-height: 1.5;
 }
 a.banner_type3:hover .banner_box h3,
@@ -447,7 +446,6 @@ a.banner_type3:focus .banner_box h3 {
 a.banner_type3 .banner_box p{
 	margin-top: 10px;
 	font-size: 14px;
-	transition: color 0.5s;
 }
 a.banner_type3:hover .banner_box p,
 a.banner_type3:focus .banner_box p {
@@ -469,7 +467,7 @@ a.banner_type3:focus .banner_box span {
 }
 #content .banner3 .left .left_bottom a.banner_type3:hover,
 #content .banner3 .left .left_bottom a.banner_type3:focus{
-	background: url(images/new1.jpg) no-repeat ;
+	background: url(../images/new1.jpg) no-repeat ;
 	background-size: cover;
 }
 
@@ -497,7 +495,7 @@ a.banner_type3:focus .banner_box span {
 }
 #content .banner3 .right .right_top a:hover,
 #content .banner3 .right .right_top a:focus{
-	background: url(images/sale.jpg) no-repeat;
+	background: url(../images/sale.jpg) no-repeat;
 	background-size: cover;
 	border: 0;
 }

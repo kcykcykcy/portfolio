@@ -1,0 +1,205 @@
+@charset "uft-8";
+
+body, ol, ul, h1, h2, h3, p {
+	margin: 0;
+	padding: 0;
+}
+ol, ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+body {
+	font-family: roboto, "Noto Sans KR", sans-serif;
+	font-size: 1em;
+}
+img {
+	vertical-align: top;
+}
+#header {
+	margin-bottom: 6.25em;
+}
+#header .inner {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 3.125em 0;
+}
+#header .title {
+	margin-bottom: 4.375em;
+}
+#header .title strong {
+	display: block;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+#header .title p {
+	font-size: 0;
+}
+#header .title p span {
+	display: inline-block;
+	padding: 0 10px;
+	font-size: 15px;
+}
+#header .title p span:nth-child(1),
+#header .title p span:nth-child(4) {
+	padding: 0;
+}
+#header .title p span:nth-child(3) {
+	border-left: 1px solid #000;
+}
+#header .title p span.gray {
+	color: #b6b6b6;
+}
+#header .desc {
+	font-size: 15px;
+}
+#header .img img{
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+/* page1  */
+#page1 .img img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+#page1 .content .inner {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 3.125em 0;
+}
+#page1 .content .title {
+	font-size: 21px;
+	line-height: 3;
+}
+#page1 .content .desc {
+	line-height: 1.6;
+}
+#page1 .content .desc span {
+	display: inline-block;
+	width: 190px;
+}
+
+
+/* page2 */
+#page2 .img img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+#page2 .typo .inner{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 3.125em 0;
+}
+#page2 .typo > .inner > .title {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding-bottom: 1.875em;
+	font-weight: bold;
+	color: #aaa;
+}
+#page2 .typo > .inner > .content {
+	display: flex;
+	justify-content: space-between;
+}
+#page2 .typo .english .title, #page2 .typo .korean .title {
+	font-size: 13px;
+}
+#page2 .typo .english .roboto {
+	margin-bottom: 1.875em;
+}
+#page2 .typo .english .playfair {
+	font-family: "playfair Display Sc", sans-serif;
+}
+#page2 .typo b {
+	display: block;
+	font-size: 35px;
+	line-height: 1.5;
+}
+#page2 .typo .content span {
+	line-height: 1.3;
+	font-size: 1em;
+}
+#page2 .typo .korean {
+	position: relative;
+}
+#page2 .typo .korean::before {
+	content: "";
+	position: absolute;
+	left: -185px;
+	top: 0;
+	width: 2px;
+	height: 100%;
+	background-color: #f0f0f0;
+}
+#page2 .color {
+	padding: 2.5em 0;
+	background-color: #f0f0f0;
+}
+#page2 .color .title {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding-bottom: 1.875em;
+	font-weight: bold;
+}
+#page2 .color .content {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+#page2 .color .content ul {
+	display: flex;
+	justify-content: space-between;
+}
+#page2 .color .content li a .hex{
+	display:  block;
+	width: 160px;
+	height: 150px;
+	color: #fff;
+	font-size: 14px;
+}
+#page2 .color .content li a .hex span {
+	display: block;
+	padding: 10px;
+}
+#page2 .color .content li:nth-child(1) a .hex{
+	background-color: #ebbb28;
+}
+#page2 .color .content li:nth-child(2) a .hex {
+	background-color: #9126ee;
+}
+#page2 .color .content li:nth-child(3) a .hex {
+	background-color: #306541;
+}
+#page2 .color .content li:nth-child(4) a .hex {
+	background-color: #000;
+}
+#page2 .color .content li:nth-child(5) a .hex {
+	background-color: #929293;
+}
+#page2 .color .content li:nth-child(6) a .hex {
+	background-color: #fff;
+	color: #000;
+}
+#page2 .color .content li a .name {
+	margin-left: 2px;
+	width: 155px;
+	height: 50px;
+	border: 1px solid rgba(0,0,0,0.1);
+	border-top: 0;
+	color: #000;
+	font-size: 14px;
+	background-color: #fff;
+}
+#page2 .color .content li:last-child a .name {
+	border-top: 1px solid rgba(0,0,0,0.1);
+}
+#page2 .color .content li a .name span {
+	display: block;
+	padding: 10px;
+}
+
+
