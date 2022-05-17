@@ -93,6 +93,7 @@ window.addEventListener("load", function(){
 	//scroll
 	let headerTop=header.firstElementChild;
 	let h;
+	let w;
 	let scrollFlag= false;
 	let winHalf;
 	let pageN=0;
@@ -104,9 +105,25 @@ window.addEventListener("load", function(){
 	let page2=document.getElementById("page2");
 	let page3=document.getElementById("page3");
 	let page4=document.getElementById("page4");
+	let menu=document.getElementById("menu");
+	let mobileMenu=menu.children[0];
+	let menuLi=mobileMenu.firstElementChild.children;
+	let menuSpan=mobileMenu.lastElementChild;
 
 	window.addEventListener("resize", function(){
 		winHalf=window.innerHeight/2;
+		w=window.innerWidth;
+		h=window.innerHeight;
+	
+		if(isMobile) {
+			if(w > h) {
+				menuSpan.style.display="none";
+			} else {
+				menuSpan.style.display="inline-block";
+			}
+		} else {
+			menuSpan.removeAttribute("style");
+		} 
 	});
 	
 	var eventList=document.createEvent("UIEvent");
@@ -188,9 +205,6 @@ window.addEventListener("load", function(){
 	let gnb=document.getElementById("gnb");
 	let gnbLi=gnb.firstElementChild.children;
 	let targetY=0;
-	let menu=document.getElementById("menu");
-	let mobile_menu=menu.firstElementChild;
-	let menuLi=mobile_menu.firstElementChild.children;
 	
 	gnbLi[0].classList.add("on");
 	
@@ -256,12 +270,14 @@ window.addEventListener("load", function(){
 
 	for(var i=0; i<project.length; i++) {
 		let label=project[i].firstElementChild.lastElementChild;
-		let golink=project[i].children[3].children[2].lastElementChild;
+		let golink=project[i].children[3].children[2].children;
 		
-		golink.addEventListener("click", function(e){
-			e.preventDefault();
-		});
+		for(var j=0; j<golink.length; j++) {
+			golink[j].addEventListener("click", function(e){
+				// e.preventDefault();
 
+			});
+		}
 		label.addEventListener("click", function(e){
 		 	e.preventDefault();
 		

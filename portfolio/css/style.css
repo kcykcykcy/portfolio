@@ -1102,10 +1102,16 @@ section .inner {
 	background-color: #333;
 	color: #fff;
 	transition: background-color 0.3s;
+	margin-left: 10px;
 }
-#page3 .project .overview .link a:hover,
+#page3 .project .overview .link a.golink {
+	margin-left: 0;
+}
 #page3 .project.on .overview .link a {
 	background-color: #f24c3e;
+}
+#page3 .project .overview .link br{
+	display: none;
 }
 #page3 .project .overview .link a::after {
 	content: "";
@@ -1306,6 +1312,18 @@ section .inner {
 	#page3 .project .detail p::after, #page3 .project .overview li::after {
 		display : none;
 	}
+	#page3 .project .overview .link a {
+		display: inline-block;
+		margin-left: 0;
+	}
+	#page3 .project .overview .link a.golink {
+		margin-bottom: 10px;
+	}
+
+	#page3 .project .overview .link br{
+		display: inline;
+	}
+
 }
 @media screen and (max-width: 500px) {
 	#page3 .project .project_label a{
@@ -1340,12 +1358,6 @@ section .inner {
 		padding: 1.25em 0 0;
 	}
 }
-@media screen and (orientation: landscape) {
-	#menu .mobile_menu > span {
-		display: none;
-	}
-}
-
 
 /* page4 */
 #page4 {

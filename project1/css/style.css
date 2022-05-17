@@ -529,21 +529,22 @@ body {
 	z-index: 2;
 	font-size: 0;
 }
-#page2 .banner_list .controls1 a {
+#page2 .banner_list .controls1 .room {
 	display: block;
 	font-size: 15px;
 	font-weight: bold;
 	color: #000;
 	line-height: 1.5;
+	margin-bottom: 0;
 }
-#page2 .banner_list .controls1 span{
+#page2 .banner_list .controls1 span.title{
 	display: block;
 	color: #2d5f73;
 	font-size: 23px;
 	margin-bottom: 20px;
 	font-weight: bold;
 }
-#page2 .banner_list .controls1 a.desc {
+#page2 .banner_list .controls1 span.desc {
 	color: #597b8a;
 	font-size: 15px;
 	margin-bottom: 0;
@@ -618,7 +619,7 @@ body {
 	background-color: rgba(51,51,51,1);
 }
 #page2 .banner_list .controls .next {
-	margin-left: 1px;
+	border-left: 1px solid rgba(255,255,255,.3);
 }
 #page2 .banner_list .controls .prev::after,
 #page2 .banner_list .controls .next::after {
@@ -655,20 +656,18 @@ body {
 	font-size: 100px;
 	font-weight: 900;
 	color: #eee;
- }
- #page2 .banner_list .text li span{
+}
+#page2 .banner_list .text li span {
 	display: inline-block;
-	position: relative;
-	left: -10px;
-	bottom: 5px;
-	/* width: 100%; */
-	/* white-space: nowrap; */
- }
- #page2 .banner_list .text span.desc{
+}
+#page2 .banner_list .text li .p2_desc{
+	display: inline-block;
+}
+#page2 .banner_list .text li .p2_desc .desc {
 	font-size: 20px;
 	font-weight: 600;
-	left: 0;
- }
+	left: 100px;
+}
 #page2 .banner_list .slider_moving {
 	position: absolute;
 	left: 50%;
@@ -682,7 +681,7 @@ body {
 	position: absolute;
 	left: 0;
 	top: 0;
-	width: calc(2500px*3);
+	width: calc(2500px * 3);
 	height: 400px;
 	transition: left 0.3s;
 }
@@ -781,8 +780,11 @@ body {
 #page3 .banner_list li.active {
 	display: block;
 }
-#page3 .banner_list li div {
+#page3 .banner_list .image li div {
 	background-color: #000;
+}
+#page3 .banner_list .image li:last-child div {
+	background-color: #ddd;
 }
 #page3 .banner_list li .list1 {
 	float: left;
@@ -937,18 +939,20 @@ body {
 }
 #page4 .desc {
 	position: absolute;
-	right: 130px;
+	left: 650px;
 	top: 110px;
 	z-index: 10;
 }
-#page4 .desc li p {
+#page4 .desc li {
 	display: none;
+}
+#page4 .desc li.active{
+	display: block;
+}
+#page4 .desc li p {
 	font-size: 14px;
 	color: #fff;
 	line-height: 1.5;
-}
-#page4 .desc li p.active{
-	display: block;
 }
 #page4 .desc li p span.top {
 	display: block;
@@ -1080,19 +1084,24 @@ body {
 	transition: background-color 0.3s;
 }
 #page5 .banner_list .control a:hover,
-#page5 .banner_list .control a:focus {
+#page5 .banner_list .control a:focus,
+#page5 .banner_list .control li.on a {
 	background-color: #333;
 }
 #page5 .banner_list .slider_moving {
 	position: absolute;
-	left: 40%;
+	left: 70%;
 	transform: translateX(-40%);
 	font-size: 0;
+	width: 950px;
+	height: 410px;
+	overflow-x: hidden;
 }
 #page5 .banner_list .slider_moving ul {
 	position: absolute;
 	left: 0;
 	width: 2000px;
+	transition: left 0.3s;
 }
 #page5 .banner_list .slider_moving li {
 	float: left;

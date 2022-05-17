@@ -5,12 +5,27 @@ $(function(){
 	var scrollTimer=0;
 	var pos;
 	var w;
+	var h;
 
 	$("#header").addClass("on");
 
 	$(window).resize(function(){
 		w=$(window).width();
-
+		h=$(window).height();
+		
+		console.log(isMobile);
+		if(isMobile) {
+			if(w > h) {
+				$("#page1, #page2, #page3, #page4, #footer").addClass("mobile");
+			}
+			else {
+				$("#page1, #page2, #page3, #page4, #footer").removeClass("mobile");				
+			}
+		} 
+		else {
+			$("#page1, #page2, #page3, #page4, #footer").removeClass("mobile");
+		}
+		
 		clearTimeout(scrollTimer);
 
 		scrollTimer=setTimeout(function(){
@@ -291,8 +306,6 @@ $(function(){
 	
 
 	//page1
-	$("#page1").addClass("on");
-
 	var scrollN=0;
 
 	function scrollMotion(n){
@@ -345,17 +358,5 @@ $(function(){
 		}
 	});
 
-
-	//page2	
-	$("#page2").addClass("on");
-
-	//page3 
-	$("#page3").addClass("on");
-
-	//page4
-	$("#page4").addClass("on");
-
-	//footer
-	$("#footer").addClass("on");
 
 });
