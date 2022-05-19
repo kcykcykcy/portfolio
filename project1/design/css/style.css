@@ -252,18 +252,16 @@ img {
 	display: none;
 }
 #page2 .color {
-	padding: 2.5em 0;
 	background-color: #f0f0f0;
 }
-#page2 .color .title {
+#page2 .color .inner {
 	max-width: 1250px;
 	margin: 0 auto;
+	padding: 2.5em 0;
+}
+#page2 .color .title {
 	padding-bottom: 1.875em;
 	font-weight: bold;
-}
-#page2 .color .content {
-	width: 1250px;
-	margin: 0 auto;
 }
 #page2 .color .content ul {
 	display: flex;

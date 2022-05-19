@@ -5,7 +5,7 @@ body, ul, ol, p, h1, h2, h3, h4, h5, h6, dl, dt, dd, table, th, td {
 }
 body {
 	line-height: 1;
-	font-family: "Open Sans", "Noto Sans KR", sans-serif;
+	font-family: "Roboto", "Noto Sans KR", sans-serif;
 	font-size: 1em;
 	color: #000;
 }

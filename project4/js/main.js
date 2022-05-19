@@ -13,7 +13,6 @@ $(function(){
 		w=$(window).width();
 		h=$(window).height();
 		
-		console.log(isMobile);
 		if(isMobile) {
 			if(w > h) {
 				$("#page1, #page2, #page3, #page4, #footer").addClass("mobile");

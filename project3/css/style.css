@@ -18,7 +18,7 @@ img {
 	max-width: 100%;
 }
 body {
-	font-family: "Open Sans", sans-serif;
+	font-family: Roboto, "Noto Sans KR", sans-serif;
 }
 body.on {
 	overflow: hidden;
@@ -30,6 +30,8 @@ body.on {
 .clearfix::after {
 	clear: both;
 }
+
+/* header */
 #header {
 	position: relative;
 	max-width: 1900px;
@@ -253,7 +255,7 @@ body.on {
 		font-size: 2.188em;	
 	}	
 }
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 480px) {
 	#header .text_zone h2 {
 		font-size: 1.875em;	
 	}
@@ -375,7 +377,7 @@ section li dd {
 		width: 100%;
 	}
 }
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 480px) {
 	#page1 .title br{
 		display: block;
 	}
@@ -391,10 +393,12 @@ section li dd {
 	transform: translateX(0);
 }
 #page2 .content {
+	padding: 0 15px;
 	margin-top: 30px;
 	margin: 0 auto;
 	max-width: 905px;
 	text-align: center;
+	box-sizing: border-box;
 }
 #page2 .content li {
 	position: relative;
@@ -479,7 +483,7 @@ section li dd {
 		font-size: 0.875em;
 	}
 }
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 480px) {
 	#page2 .content {
 		padding: 0 15px;
 	}
@@ -642,7 +646,7 @@ section li dd {
 		width: 50vw;
 	}
 }
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 480px) {
 	#page3 .title .br {
 	   display: block;
 	}
@@ -675,6 +679,9 @@ section li dd {
 #page4 .awards_list {
 	margin: 0 auto;
 	max-width: 940px;
+	padding: 0 15px;
+	overflow-y: hidden;
+	box-sizing: border-box;
 }
 #page4 .awards_list li {
 	float: left;
@@ -756,11 +763,15 @@ section li dd {
 	max-width: 100%;
 }
 @media only screen and (max-width: 940px) {
+	#page4 .signature li {
+		width: 227px;
+		padding: 0;
+	}
 	#page4 .signature li a {
 		padding: 2.188em;	
 	}
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 730px) {
 	#page4 .awards_list li {
 		float: none;
 		margin-left: 0;
@@ -771,7 +782,7 @@ section li dd {
 		margin-bottom: 0;
 	}
 }
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 480px) {
 	#page4 {
 		padding-bottom: 6.25em; 
 	}
@@ -802,10 +813,12 @@ section li dd {
 	display: none;
 }
 #page5 .form {
+	padding: 0 15px;
 	max-width: 940px;
 	margin: 0 auto;
 	margin-top: 3.125em;
 	overflow-x: hidden;
+	box-sizing: border-box;
 }
 #page5 .input_wrap {
 	float: left;
@@ -920,9 +933,12 @@ input[type=submit] {
 		width: 100%;
 	}
 }
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 480px) {
 	#page5 .title br{
 		display: block;
+	}
+	#page5 .title br {
+		display: inline;
 	}
 }
 
@@ -1006,7 +1022,7 @@ input[type=submit] {
 		margin-left: 15px;
 	}
 }
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 480px) {
 	#footer .address li{
 		white-space: normal;
 	}

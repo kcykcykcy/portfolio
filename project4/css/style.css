@@ -12,7 +12,7 @@ ul, dl, ol {
 	list-style: none;
 }
 body {
-	font-family: "Noto Sans KR", sans-serif;
+	font-family: Roboto, "Noto Sans KR", sans-serif;
 	overflow-y: hidden;
 }
 body.fixed {
