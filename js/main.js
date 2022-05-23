@@ -4,11 +4,21 @@ window.addEventListener("load", function(){
 	let videoList=["header_video1.mp4", "header_video2.mp4", "header_video3.mp4"];
 	let controlNumLi=[1,2,3];
 	video.muted= true;
-	video.play();
+	videoDimmed();
 
 	let control=header.children[4];
 	let controlNum=control.firstElementChild.children[0];
 	let videoN=0;
+
+	function videoDimmed(){
+		video.style.display="none";
+
+		setTimeout(function(){
+			video.style.display="block";
+			video.play();
+			gsap.fromTo(video, {opacity: 0}, {opacity: 1, duration: 0.6});
+		}, 200);
+	}
 
 	video.addEventListener("ended", function(){
 		// const path=video.getAttribute("src");
@@ -18,10 +28,10 @@ window.addEventListener("load", function(){
 		else {
 			videoN=0;
 		}
-		video.setAttribute("src", "images/"+videoList[videoN]);
-		video.pause();
+
 		setTimeout(function(){
-			video.play();
+			video.setAttribute("src", "images/"+videoList[videoN]);
+			videoDimmed();
 		}, 100);
 		// console.log(video.setAttribute);
 		controlNum.innerText="0"+controlNumLi[videoN];
@@ -52,9 +62,7 @@ window.addEventListener("load", function(){
 			videoN=0;
 		}
 		video.setAttribute("src", "images/"+videoList[videoN]);
-		video.currentTime=0;
-		video.pause();
-		video.play();
+		videoDimmed();
 		controlNum.innerText="0"+controlNumLi[videoN];
 
 		barfill.classList.remove("on");
@@ -72,8 +80,7 @@ window.addEventListener("load", function(){
 			videoN= 2;
 		}
 		video.setAttribute("src", "images/"+videoList[videoN]);
-		video.currentTime=0;
-		video.play();
+		videoDimmed();
 		controlNum.innerText="0"+controlNumLi[videoN];
 
 		barfill.classList.remove("on");
@@ -108,7 +115,8 @@ window.addEventListener("load", function(){
 	let darkN=0;
 	let section=document.getElementsByTagName("section");
 	let download=header.children[6];
-	let arrow= download.lastElementChild; console.log(arrow);
+	let arrow= download.lastElementChild;
+	// console.log(arrow);
 	let page1=document.getElementById("page1");
 	let page2=document.getElementById("page2");
 	let page3=document.getElementById("page3");
@@ -153,34 +161,37 @@ window.addEventListener("load", function(){
 		else if (h <= page4.offsetTop-winHalf) {
 			pageN=3;
 			
-			if(h == (document.body.offsetHeight - window.innerHeight)) {
+			if(h == Math.ceil(document.body.offsetHeight - window.innerHeight)) {
 				pageN=4;
 			}
 		}
+		// console.log(pageN);
 		
-		if (h <= page1.offsetTop-1) {
+		if (h <= page1.offsetTop-100) {
 			darkN=0;
 		}
-		else if (h <= page2.offsetTop-1) {
+		else if (h <= page2.offsetTop-100) {
 			darkN=1;
 		}
-		else if (h <= page3.offsetTop-1) {
+		else if (h <= page3.offsetTop-100) {
 			darkN=2;
 		}
-		else if (h <= page4.offsetTop-1) {
+		else if (h <= page4.offsetTop-100) {
 			darkN=3;
-			// console.log(h, document.body.offsetHeight - window.innerHeight);
-			if(h == (document.body.offsetHeight - window.innerHeight)){
+
+			// console.log(h, document.body.offsetHeight-window.innerHeight);
+			if(h >= (document.body.offsetHeight-window.innerHeight-50)) {
 				darkN=4;
 			}
 		}
-		
+		// console.log(darkN);
+
 		for(var j=0; j<gnbLi.length; j++) {
 			if(j== darkN) {
-				gnbLi[j].classList.add("on");	
-				menuLi[j].classList.add("on");	
+				gnbLi[j].classList.add("on");
+				menuLi[j].classList.add("on");
 			} else {
-				gnbLi[j].classList.remove("on");	
+				gnbLi[j].classList.remove("on");
 				menuLi[j].classList.remove("on");
 			}
 		}
@@ -205,7 +216,7 @@ window.addEventListener("load", function(){
 				for (var i=0; i<section.length; i++) {
 					section[i].classList.add("on");
 				}
-				scrollFlag=true;
+				if(pageN== 4) scrollFlag=true;
 			} 
 		}
 	});
@@ -241,17 +252,17 @@ window.addEventListener("load", function(){
 			e.preventDefault();
 			var n=e.currentTarget.index;
 
-			if(i==0) {
+			if(n==0) {
 				targetY=0;
 			}
 			else {
 				targetY=section[n-1].offsetTop;
 			}
-			
+
 			tab.classList.remove("on");
 			menu.classList.remove("on");
 			body.classList.remove("fixed");
-			gsap.to(window, {scrollTo: targetY-100, duration: 0.5, delay: 0.5});
+			gsap.to(window, {scrollTo: targetY-50, duration: 0.5, delay: 0.5});
 		});
 	}
 
